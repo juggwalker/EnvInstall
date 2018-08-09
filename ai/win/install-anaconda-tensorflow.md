@@ -4,7 +4,8 @@
 
 - 添加国内镜像
 `
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ 
+
 conda config --set show_channel_urls yes
 `
 
@@ -13,11 +14,13 @@ conda config --set show_channel_urls yes
 - conda create -n tfpy3 python=3.5
 
 - 激活环境 activate tfpy3
+- linux下激活环境 source activate tfpy3
 
 ### 3. 在虚拟环境tfpy3中安装TensorFlow
 
 - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ https://mirrors.tuna.tsinghua.edu.cn/tensorflow/windows/cpu/tensorflow-1.1.0-cp35-cp35m-win_amd64.whl
 - deactivate
+- linux下退出 source deactivate
 - conda info --envs
 
 ### 4. 配置jupyter支持python的虚拟环境
