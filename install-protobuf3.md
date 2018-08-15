@@ -5,12 +5,12 @@
 `
 wget https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip 
 `
-
-- unzip protoc-3.6.1-linux-x86_64.zip 
-- mv bin/protoc /usr/local/bin 
-- mv include/google /usr/local/include 
-- which protoc 
-
+```shell
+unzip protoc-3.6.1-linux-x86_64.zip 
+mv bin/protoc /usr/local/bin 
+mv include/google /usr/local/include 
+which protoc 
+```
 
 
 #### PHP测试DEMO
@@ -18,39 +18,37 @@ wget https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-li
 ###### 新建个PHP项目 
 
 
-`
+```shell
 mkdir demoproto 
 cd demoproto 
 composer require google/protobuf 
 
-`
+```
 
 ###### 编写demo.proto
 
-` 
+```shell
 vim demo.proto 
-`
-` 
 cat demo.proto 
-`
+```
 
-` 
+```shell
 syntax = "proto3"; 
 message SearchRequest { 
   string query = 1; 
   int32 page_number = 2; 
   int32 result_per_page = 3; 
 } 
-`
+```
 
 
-`
+```shell
 protoc --php_out=./ demo.proto 
-`
+```
 
-`
+```shell
 vim SearchRequest.php 
-`
+```
 
 
 ```php
